@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulare und Tabellen</title>
+    <style>
+      .form-group {
+        display: flex;
+      }
+      .form-group > * {
+        flex-basis: 50%;
+        margin: 15px;
+        padding: 5px;
+      }
+      table {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 150px;
+      }
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="POST" action="">
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <input name="inputName" required type="text" id="inputName" placeholder="Gibt deinen Namen ein">
+      </div>
+      <div class="form-group">
+        <label for="inputMail">email</label>
+        <input name="inputMail" type="email" id="inputMail" placeholder="Gibt deinen Namen ein">
+      </div>
+      <div class="form-group">
+        <label for="inputPassword">email</label>
+        <input name="inputPassword" type="password" id="inputPassword" placeholder="Gibt deinen Namen ein">
+      </div>
+      <div class="form-group">
+        <label for="inputRange">email</label>
+        <input name="inputRange" type="range" id="inputRange" placeholder="Gibt deinen Namen ein">
+      </div>
+      <fieldset>
+        <legend>Meine Elemente</legend>
+        <div class="form-group">
+          <label for="inputDate">email</label>
+          <input name="inputDate" type="date" id="inputDate" placeholder="Gibt deinen Namen ein">
+        </div>
+        <div class="form-group">
+          <label for="inputTime">email</label>
+          <input name="inputTime" type="time" id="inputTime" placeholder="Gibt deinen Namen ein">
+        </div>
+        <div class="form-group">
+          <label for="inputFile">email</label>
+          <input name="inputFile" type="file" id="inputFile" placeholder="Gibt deinen Namen ein">
+        </div>
+        <div class="form-group">
+          <label for="inputCheckbox">email</label>
+          <input name="inputCheckbox" type="checkbox">Ja
+          <input name="inputCheckbox" type="checkbox">Nein
+        </div>
+      </fieldset>
+      <div class="form-group">
+        <label for="inputRadio">email</label>
+        <input name="inputRadio" type="radio">Ja 
+        <input name="inputRadio" type="radio">Nein
+      </div>
+      <div class="form-group">
+        <label for="tiere">Tiere</label>
+        <select name="tiere" id="tiere">
+          <option value="1" >Erdmännchen</option>
+          <option value="2">Katze</option>
+          <option value="3" selected>Hund</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="kommentar">Tiere</label>
+        <textarea rows="5" cols="20" name="kommentar" id="kommentar" placeholder="Schreib was"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="tiere2">Tiere</label>
+        <input type="text" list="inttiere2" name="tiere2" id="tiere2">
+        <datalist name="tiere2" id="inttiere2">
+          <option value="Erdmännchen" >
+          <option value="Katze">
+          <option value="Hund">
+        </datalist>
+      </div>
+<?-- macht man nicht      <input type="submit">-->
+      <button type="submit">Absenden</button>
+      <button type="reset">Reset</button>
+      <button type="button">Der macht nix</button>
+    </form>
+    <hr>
+    <table>
+      <thead>
+        <tr colspan="3">Meine Überschrift</tr>
+        <tr>
+          <th>Überschrit 1</th>
+          <th>Überschrit 2</th>
+          <th>Überschrit 3</th>
+        </tr>
+      </thead>
+      <!-- <tfoot>
+        <tr>
+          <th>Überschrit 1</th>
+          <th>Überschrit 2</th>
+          <th>Überschrit 3</th>
+        </tr>
+      </tfoot> -->
+      <tbody>
+        <tr>
+          <td>Zelle 1 1</td>
+          <td>Zelle 1 2</td>
+          <td>Zelle 1 3</td>
+        </tr>
+        <tr>
+          <td>Zelle 2 1</td>
+          <td colspan="2">Zelle 2 2</td>
+        </tr>
+        <tr>
+          <td>Zelle 3 1</td>
+          <td rowspan="2">Zelle 3 2</td>
+          <td>Zelle 3 3</td>
+        </tr>
+        <tr>
+          <td>Zelle 4 1</td>
+          <!-- <td>Zelle 4 2</td> -->
+          <td>Zelle 4 3</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
